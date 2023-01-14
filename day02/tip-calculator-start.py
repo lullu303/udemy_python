@@ -24,4 +24,10 @@ people_to_int = int(people)
 bill_per_people = bill_with_tip / people_to_int
 
 final_amount = round(bill_per_people, 2)
+
+# 형식화 처리: 클론과 점을 이용해서 부동소수점에서 소수점 2자리까지를 표시함. 그리고 형식함수를 사용한다
+# 반올림을 사용하는 대신 "{:.2f}" 형식을 사용해서 문자열을 만든 뒤에
+# 형식함수 .format 에 bill_per_people를 전달하면 된다.
+final_amount = "{:.2f}".format(bill_per_people)
+
 print(f"each person should pay: {final_amount}$")
